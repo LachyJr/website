@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="assets/css/main.css?v=1.0">
+<html lang="en"></html>
+  <head>
+  <title>lachysek - 404</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="lachysek">
+  <meta property="og:description" content="my website">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="shortcut icon" type="x-icon" href="assets/image.png" >
+  <script src="assets/js/main.js?v=1.0"></script>
+</head>
+  <body>
+    <div id="particles-js">
+    <div class="header">
+      <h1>
+        <span class="site-title" onclick="copyTitle()">404
+          <span class="tooltip">error code</span>
+        </span>
+	      <span class="desc"></span>
+      </h1>
+
+      <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+      <script>
+        var typed = new Typed(".desc", {
+        strings: ["This page could not be found."],
+        typeSpeed: 40,
+        startDelay: 350,
+        onComplete: function(self) {
+        setTimeout(function() {
+          document.querySelector('.typed-cursor').classList.add('hidden');
+        }, 3000);
+      }
+    });
+      </script>
+      <div id="popup" class="popup">Copied!</div>
+      <script>
+        function copyTitle() {
+          const textToCopy = 'HTTP 404';
+          navigator.clipboard.writeText(textToCopy).then(() => {
+            const popup = document.getElementById('popup');
+            popup.classList.add('show');
+            setTimeout(() => {
+              popup.classList.remove('show');
+            }, 2000);
+          });
+        }
+      </script>
+    </div>
+</footer>
+<script src="particles_js/2.0.0/particles.min.js"></script>
+<script src="assets/js/sweet-scroll.min.js"></script>
+<script src="assets/js/main.js"></script>
