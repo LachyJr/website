@@ -11,6 +11,7 @@ span{
 .typed-cursor {
     display: inline-block;
     animation: blink 0.7s infinite;
+    user-select: none;
 }
 
 @keyframes blink {
