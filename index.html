@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="assets/css/main.css?v=1.1">
-<html lang="en"></html>
-  <head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.2">
   <title>lachysek</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="lachysek">
-  <meta property="og:description" content="my website">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
   <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="shortcut icon" type="x-icon" href="assets/image.png" >
-  <script src="assets/js/main.js?v=1.1"></script>
+  <script src="assets/js/main.js?v=1.2"></script>
 </head>
-  <body>
-    <div id="particles-js">
+<body>
+  <div id="particles-js">
     <div class="header">
-      <h1>
+      <div id="player-container" class="player-card">
+        <img src="https://cdn.lachysek.xyz/images/hajnyjelesapan.png" class="album-cover" alt="Album Cover">
+        <div class="song-info">
+          <div class="song-title" id="song-title">Hajný je lesa pán</div>
+          <div class="artist-name" id="artist-name">Ať žijí duchové</div>
+          <div class="controls">
+            <button id="play-button"><i class="fa-solid fa-play"></i></button>
+            <input type="range" min="0" max="1" step="0.01" value="0.4" class="volume-slider" id="volume-slider">
+          </div>
+        </div>
+      </div>
+      <h1 class="site-header">
         <span class="site-title" onclick="copyTitle()">lachysek
           <span class="tooltip">my discord</span>
         </span>
-	      <span class="desc"></span>
+        <span class="desc"></span>
       </h1>
       <div class="header-icons">
         <a aria-label="Gamesites Profile" target="_blank" href="https://www.gamesites.cz/forum/lachysekk-u73648.html">
@@ -49,15 +55,15 @@
       <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
       <script>
         var typed = new Typed(".desc", {
-        strings: ["Programmer, Gamer"],
-        typeSpeed: 75,
-        startDelay: 350,
-        onComplete: function(self) {
-        setTimeout(function() {
-          document.querySelector('.typed-cursor').classList.add('hidden');
-        }, 3000);
-      }
-    });
+          strings: ["Developer"],
+          typeSpeed: 75,
+          startDelay: 350,
+          onComplete: function(self) {
+            setTimeout(function() {
+              document.querySelector('.typed-cursor').classList.add('hidden');
+            }, 3000);
+          }
+        });
       </script>
       <div id="popup" class="popup">Copied!</div>
       <script>
@@ -73,7 +79,11 @@
         }
       </script>
     </div>
-</footer>
-<script src="particles_js/2.0.0/particles.min.js"></script>
-<script src="assets/js/sweet-scroll.min.js"></script>
-<script src="assets/js/main.js"></script>
+  </div>
+  <audio id="audio-player"></audio>
+  <script src="particles_js/2.0.0/particles.min.js"></script>
+  <script src="assets/js/sweet-scroll.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/music.js"></script>
+</body>
+</html>
