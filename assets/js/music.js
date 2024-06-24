@@ -13,6 +13,7 @@ function loadSong() {
     artistName.textContent = song.artist;
     audioPlayer.src = song.audio;
     audioPlayer.volume = 0.4;
+    audioPlayer.loop = true;
 }
 
 function playSong() {
