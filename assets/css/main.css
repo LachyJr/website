@@ -110,7 +110,7 @@ span{
 }
 
 .player-card {
-    width: 280px;
+    width: 260px;
     padding: 20px;
     background-color: #1a222c;
     border-radius: 25px;
@@ -137,7 +137,7 @@ span{
 }
 
 .song-title {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     white-space: nowrap;
 }
