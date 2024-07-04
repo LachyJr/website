@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lachysek</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="shortcut icon" type="image/png" href="assets/image.png">
+  <script src="assets/js/main.js?v=1.1"></script>
+</head>
+<body>
+  <div id="particles-js">
+    <div class="header">
+      <div id="player-container" class="player-card">
+        <img src="https://cdn.lachysek.xyz/images/kamaradboris.png" class="album-cover" alt="Album Cover">
+        <div class="song-info">
+          <div class="song-title" id="song-title">KAMARÁD BORIS</div>
+          <div class="artist-name" id="artist-name">FIZISTYLE</div>
+          <div class="controls">
+            <button id="play-button"><i class="fa-solid fa-play"></i></button>
+            <input type="range" min="0" max="1" step="0.01" value="0.4" class="volume-slider" id="volume-slider">
+          </div>
+        </div>
+      </div>
+      <h1 class="site-header">
+        <span class="site-title" onclick="copyTitle()">lachysek
+          <span class="tooltip">my discord</span>
+        </span>
+        <span class="desc"></span>
+      </h1>
+      <div class="header-icons">
+        <a aria-label="Gamesites Profile" target="_blank" href="https://www.gamesites.cz/forum/lachysekk-u73648.html">
+          <i class="icon fa fa-chrome" aria-hidden="true">
+            <span class="tooltip">Gamesites</span>
+          </i>
+        </a>
+        <a aria-label="Steam" target="_blank" href="https://steamcommunity.com/id/lachysek/">
+          <i class="icon fa fa-steam" aria-hidden="true">
+            <span class="tooltip">Steam</span>
+          </i>
+        </a>
+        <a aria-label="Discord" target="_blank" href="https://discord.gg/Nxfn2MAvwK">
+          <i class="icon fa fa-discord" aria-hidden="true">
+            <span class="tooltip">Owníme</span>
+          </i>
+        </a>
+        <a aria-label="Github" target="_blank" href="https://github.com/lachysek">
+          <i class="icon fa fa-github" aria-hidden="true">
+            <span class="tooltip">Github</span>
+          </i>
+        </a>
+      </div>
+      <div class="header-links"></div>
+
+      <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+      <script>
+        var typed = new Typed(".desc", {
+          strings: ["Developer"],
+          typeSpeed: 75,
+          startDelay: 350,
+          onComplete: function(self) {
+            setTimeout(function() {
+              document.querySelector('.typed-cursor').classList.add('hidden');
+            }, 3000);
+          }
+        });
+      </script>
+      <div id="popup" class="popup">Copied!</div>
+      <script>
+        function copyTitle() {
+          const textToCopy = 'lachysek';
+          navigator.clipboard.writeText(textToCopy).then(() => {
+            const popup = document.getElementById('popup');
+            popup.classList.add('show');
+            setTimeout(() => {
+              popup.classList.remove('show');
+            }, 2000);
+          });
+        }
+      </script>
+    </div>
+  </div>
+  <audio id="audio-player"></audio>
+  <script src="particles_js/2.0.0/particles.min.js"></script>
+  <script src="assets/js/sweet-scroll.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/music.js"></script>
+</body>
+</html>
