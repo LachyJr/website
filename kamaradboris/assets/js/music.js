@@ -1,5 +1,5 @@
 let currentSongIndex = 0;
-let isPlaying = false;
+let isPlaying = true;
 
 const audioPlayer = document.getElementById('audio-player');
 const songTitle = document.getElementById('song-title');
@@ -47,3 +47,4 @@ playButton.addEventListener('click', () => {
 
 loadSong(currentSongIndex);
 initVolumeSlider();
+playSong();
